@@ -228,6 +228,14 @@ if (customer.name == "diego") {
   }
 } else if (customer.pass == "vip") {
   alert(`Welcome in ${customer.name}!`);
+  if (customer.entrance == "yes") {
+    ticket = confirm("do you want to use your ticket?");
+    if (ticket) {
+      alert("Welcome in " + customer.name);
+    } else {
+      alert("Good bye " + customer.name);
+    }
+  }
 } else if (customer.name != "diego") {
   alert(`Hello ${customer.name}!`);
   if (customer.entrance == "yes") {
