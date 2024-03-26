@@ -1,6 +1,6 @@
-// low
+//! low
 // 1/2
-/*
+/* 
 let num1 = 4;
 let num2 = 5;
 
@@ -11,31 +11,31 @@ if (num1 > num2) {
 } else {
   console.log(num1 + " y " + num2 + " son iguales.");
 }
-*/
+ */
 
 // 3
-/*
-if (num1 == num2) {
+
+/* if (num1 == num2) {
   console.log("The numbers are equal");
 } else {
   console.log("The numbers are different");
-}
-*/
+} */
+
 //4/5
 // let date1 = "2018-9-2";
-// let date2 = "2023-7-5";
-/*
-let date1 = "2-2-2023";
-let date2 = "2020-1-4";
+// let date2 = "2004-7-5";
+
+/* let date1 = "2-2-2023";
+let date2 = "2020-1-4"; */
 //se debe mantener un formato para poder comparar las strings, sino se debe usar date() para tener formato de fecha
-if (date1 > date2) {
+/* if (date1 > date2) {
   console.log(`The date ${date1} is grater than ${date2}`);
 } else if (date1 < date2) {
   console.log(`The date ${date2} is grater than ${date1}`);
 } else {
   console.log("The dates are the same!");
 }
-*/
+ */
 
 //6
 /*
@@ -202,9 +202,10 @@ if (number < 1000 && number > -1000) {
 } 
 */
 
-//High level
+//!High level
 
 //1
+
 let customer = {
   name: "",
   pass: "",
@@ -212,31 +213,11 @@ let customer = {
 };
 let ticket = "";
 let ticketCost = "";
-customer.name = prompt("Enter customer name");
-customer.pass = prompt("Enter customer pass");
-customer.entrance = prompt("Enter customer entrance");
+customer.name = prompt("Enter customer name").toLowerCase();
+customer.pass = prompt("Enter customer pass").toLowerCase();
+customer.entrance = prompt("Enter customer entrance").toLowerCase();
 
-if (customer.name == "diego") {
-  alert(`Hello ${customer.name}!`);
-  if (customer.entrance == "yes") {
-    ticket = confirm("do you want to use your ticket?");
-    if (ticket) {
-      alert("Welcome in " + customer.name);
-    } else {
-      alert("Good bye " + customer.name);
-    }
-  }
-} else if (customer.pass == "vip") {
-  alert(`Welcome in ${customer.name}!`);
-  if (customer.entrance == "yes") {
-    ticket = confirm("do you want to use your ticket?");
-    if (ticket) {
-      alert("Welcome in " + customer.name);
-    } else {
-      alert("Good bye " + customer.name);
-    }
-  }
-} else if (customer.name != "diego") {
+if (customer.name == "diego" || customer.pass == "vip") {
   alert(`Hello ${customer.name}!`);
   if (customer.entrance == "yes") {
     ticket = confirm("do you want to use your ticket?");
