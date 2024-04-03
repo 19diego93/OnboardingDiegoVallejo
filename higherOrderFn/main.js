@@ -57,35 +57,52 @@ ibuFinder(beers, 50);
 console.log(ibuFound);
  */
 //8 tuve problemas con las llaves en el callback
-
+// let coso = prompt("algo?");
 /* let nameFound;
 let nameFinder = (beerName) => {
   nameFound = beers.findIndex(
     (beer) => beer.name.toLowerCase() == beerName.toLowerCase()
   );
-  if (nameFound == -1) {
-    console.log(`${beerName} does not exist.`);
-  } else {
+  if (nameFound !== -1) {
     nameFound++;
+    console.log(""+nameFound);
+  } else {
+    console.log(`${beerName} does not exist.`);
   }
 };
-nameFinder("Bramling X");
-console.log(nameFound); */
-
+nameFinder("Berlin x");
+ */
 //9
-/* let underTheLimit;
-let filterBeers = (array, limit) => {
-  underTheLimit = array
-    .filter((beer) => beer.abv < limit);
-    for (const beer of underTheLimit) {
-      beer.name = beer.name;
-      beer.alcohol = beer.abv;
-      beer.bitterness = beer.ibu;      
-    }
-};
-filterBeers(beers, 10);
-console.log(underTheLimit); */
 
+/* let filterBeers = (array, limit) => {
+  let underTheLimit = array.filter((beer) => beer.abv < limit);
+  let newArray=[];
+
+  for (const beer of underTheLimit) {
+    let aux ={name: beer.name,
+    alcohol : beer.abv,
+    bitterness : beer.ibu,}
+    newArray.push(aux)
+  }
+  console.log(newArray)
+};
+filterBeers(beers, 7); */
+//!simulacro
+/* nombre="diego"
+let aux;
+let filterBeers = (array, limit) =>
+  array
+    .filter((beer) => beer.abv < limit)
+    .map(
+      (beer) =>
+         aux ={
+          name: beer.name,
+          alcohol: beer.abv,
+          bitterness: beer.ibu,
+        }
+    );
+console.log(filterBeers(beers,4.6))
+console.log(nombre) */
 //10
 /* let filteredBeer;
 let beerFilter = (array, prop, boolean) => {
@@ -100,7 +117,7 @@ beerFilter(beers, "abv", false);
 console.log(filteredBeer); */
 
 //11
-let contenedor = document.getElementById("contenedor");
+/* let contenedor = document.getElementById("contenedor");
 let template = document.createElement("template");
 
 let tableConstructor = (array) => {
@@ -130,3 +147,4 @@ let tableConstructor = (array) => {
 };
 tableConstructor(beers);
 console.log([template]);
+ */
