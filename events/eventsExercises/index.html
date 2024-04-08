@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Events</title>
+</head>
+
+<body>
+    <!-- caja de colores  -->
+    <div class="w-full pt-10 flex flex-col items-center justify-center gap-5 bg-yellow-500" id="contenedor">
+        <div class=" bg-gray-500 w-[300px] h-[300px] border" id="cuadrado"></div>
+        <button class="w-[300px] border hover:bg-red-500 hover:text-white hover:font-bold bg-blue-400">Change</button>
+
+        <!-- input texto -->
+        <div class="w-full   flex flex-col items-center justify-center gap-5 bg-yellow-500" id="contenedor2">
+            <div class=" bg-gray-500 w-[300px] h-[300px] border flex flex-col items-center justify-evenly"
+                id="cuadradoLetras">
+                <p class="font-semibold text-lg w-3/4 h-auto text-center truncate inline-block" id="textScreen"></p>
+                <input class="border px-3 py-1 bg-white
+            " type="text" name="text" id="inputText" value="">
+            </div>
+            <!-- Masa corporal -->
+            <div id="cajaMasaCorporal" class="w-full   flex flex-col items-center justify-center gap-5 bg-yellow-500">
+                <form class=" bg-gray-500 w-[300px] h-[300px] border flex flex-col items-center justify-center pl-4"
+                    id="formMasa" action="">
+                    <p>Estrutura</p>
+                    <p>en centrimetros</p>
+                    <input type="number" name="cm" id="cm">
+                    <p class="mt-4">Peso</p>
+                    <p>en kilogramos</p>
+                    <input type="number" name="kg" id="kg">
+                    <button
+                        class="w-[100px] border hover:bg-red-500 hover:text-white hover:font-bold bg-blue-400 mt-4">Calcular</button>
+                </form>
+            </div>
+
+            <div class="w-full flex flex-col items-center justify-center gap-5 bg-yellow-500">
+                <form class=" bg-gray-500 w-[300px] h-[300px] border flex flex-col items-center justify-center pl-4"
+                    id="formConversor">
+                    <p>Monto moneda local</p>
+                    <p>sin comas ni puntos</p>
+                    <input class="mt-3 text-center" type="number" name="local" id="local" value="0">
+                    <p class="mt-4">Monto en dólares</p>
+                    <p>sin comas ni puntos</p>
+                    <input type="number" class="mt-3 text-center" name="dolares" id="dolares" value="0">
+                    <button
+                        class=" w-[100px] border hover:bg-red-500 hover:text-white hover:font-bold bg-blue-400 mt-4">Convertir</button>
+                    <a id="resetear"
+                        class=" w-[100px] border hover:bg-red-500 hover:text-white hover:font-bold bg-blue-400 mt-4 text-center cursor-pointer">Resetear</a>
+                </form>
+                </form>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+</body>
+
+</html>
